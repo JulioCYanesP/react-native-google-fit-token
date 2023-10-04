@@ -111,7 +111,7 @@ public class GoogleFitModule extends ReactContextBaseJavaModule implements Lifec
 
     @ReactMethod
     public String getUserEmail (Promise promise) {
-        String email;
+        String email = "empty";
         try {
             if (mGoogleFitManager != null) {
                 email = mGoogleFitManager.getUserEmail(getCurrentActivity());
@@ -119,7 +119,7 @@ public class GoogleFitModule extends ReactContextBaseJavaModule implements Lifec
             promise.resolve(null);
         } catch (Exception e) {
             promise.reject(e);
-            return null;
+            email = null;
         }
         return email;
     }
