@@ -118,6 +118,7 @@ public class GoogleFitModule extends ReactContextBaseJavaModule implements Lifec
             promise.resolve(null);
         } catch (Exception e) {
             promise.reject(e);
+            return null;
         }
     }
 
