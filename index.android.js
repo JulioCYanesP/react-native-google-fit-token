@@ -59,7 +59,10 @@ class RNGoogleFit {
     const { isAuthorized } = await googleFit.isAuthorized()
     this.isAuthorized = isAuthorized
   }
-
+  getUserEmail = () => {
+    return googleFit.getUserEmail();
+  }
+  
   disconnect = () => {
     this.isAuthorized = false
     googleFit.disconnect()

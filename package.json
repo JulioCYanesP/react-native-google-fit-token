@@ -1,15 +1,15 @@
 {
-  "name": "react-native-google-fit",
+  "name": "react-native-google-fit-token",
   "version": "0.19.1",
-  "description": "A React Native bridge module for interacting with Google Fit",
+  "description": "A fork of react-native-google-fit that allows you to get the access to email from token for the Google Fit API",
   "main": "index.android.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/StasDoskalenko/react-native-google-fit/issues"
+    "url": "https://github.com/JulioCYanesP/react-native-google-fit-token"
   },
-  "homepage": "https://github.com/StasDoskalenko/react-native-google-fit#readme",
+  "homepage": "https://github.com/JulioCYanesP/react-native-google-fit-token",
   "keywords": [
     "react-native",
     "google-fit",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StasDoskalenko/react-native-google-fit.git"
+    "url": "git+https://github.com/JulioCYanesP/react-native-google-fit-token.git"
   },
   "dependencies": {
     "moment": "^2.29.2"

@@ -207,6 +207,19 @@ public class GoogleFitManager implements ActivityEventListener {
         mApiClient.connect();
     }
 
+    public String getUserEmail (Context context) {
+        GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(context, options);
+        // this is a temporary scope as a hotfix
+        // Ref to https://developers.google.com/android/guides/releases?hl=en
+        // will be removed in the future release
+        String tempScope = "www.googleapis.com/auth/fitness.activity.read";
+        GoogleSignInAccount gsa = GoogleSignIn.getAccountForScopes(mReactContext, new Scope(tempScope));
+        return gsa.getEmail();
+    }
+
     public void  disconnect(Context context) {
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
