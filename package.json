@@ -1,6 +1,6 @@
 {
   "name": "react-native-google-fit-token",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A fork of react-native-google-fit that allows you to get the access to email from token for the Google Fit API",
   "main": "index.android.js",
   "scripts": {
