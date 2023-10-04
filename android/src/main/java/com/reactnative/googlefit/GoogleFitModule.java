@@ -113,7 +113,7 @@ public class GoogleFitModule extends ReactContextBaseJavaModule implements Lifec
     public String getUserEmail (Promise promise) {
         try {
             if (mGoogleFitManager != null) {
-                mGoogleFitManager.getUserEmail(getCurrentActivity());
+                return mGoogleFitManager.getUserEmail(getCurrentActivity());
             }
             promise.resolve(null);
         } catch (Exception e) {
